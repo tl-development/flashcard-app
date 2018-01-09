@@ -8,9 +8,13 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "postinstall": "npm run build && cd server && npm install",
+    "start": "cd server && node server",
+    "react-start": "react-scripts start",
+    "dev": "npm run build && cd server && npm run dev",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
